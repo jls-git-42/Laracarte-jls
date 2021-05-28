@@ -1,4 +1,4 @@
-@extends('layouts/default')
+@extends('layouts/default',['title'=>'Au Sujet de'])
 
 @section('content')
     <div class="container">
@@ -12,7 +12,7 @@
             </p>
         </div>        
     </div>
-    <p>Sentiti libero di aiutare a migliorare il <a href="#">codice sorgente</a></p>
+    <p>Sentiti libero di aiutare a migliorare il <a href="https://github.com/jls-git-42/Laracarte-jls">codice sorgente</a></p>
     <hr style="border-top: 1px solid #8c8b8b">
     <h2>cos'è Laramap ?</h2>
     <p>laramap è il sito web al quale si ispira laracarte</p>
