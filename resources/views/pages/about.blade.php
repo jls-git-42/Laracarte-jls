@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-    <h2>cos'è Laracarte ?</h2>
-    <p>Laramap è un clone di <a href="https://laramap.com" target="_blank">Laramap.com</a></p>
+    <h2>cos'è {{ config('app.name') }} ?</h2>
+    <p>{{ config('app.name') }} è un clone di <a href="https://laramap.com" target="_blank">Laramap.com</a></p>
     <div class="row">
         <div class="col-md-6">
             <p class="alert alert-warning">
@@ -15,10 +15,10 @@
     <p>Sentiti libero di aiutare a migliorare il <a href="https://github.com/jls-git-42/Laracarte-jls">codice sorgente</a></p>
     <hr style="border-top: 1px solid #8c8b8b">
     <h2>cos'è Laramap ?</h2>
-    <p>laramap è il sito web al quale si ispira laracarte</p>
+    <p>laramap è il sito web al quale si ispira {{ config('app.name') }}</p>
     <p>maggiori informazioni <a href="#">qui...</a></p>
     <hr style="border-top: 1px solid #8c8b8b">
-    <h2>quali strumenti e servizi vengono utilizzati in Laracarte </h2>
+    <h2>quali strumenti e servizi vengono utilizzati in {{ config('app.name') }}</h2>
     <p>fondamentalmente è costruito con laravel & bootstrap ma ci sono un sacco di servizi usati per le e-mail e altre sezioni</p>
     <ul>
         <li>Laravel</li>

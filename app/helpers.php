@@ -12,7 +12,7 @@ if(!function_exists('Page_Title')){
         if($Title === null){
             return config('app.name');
         }else{
-            return $Title . ' | ' .config('app.name');
+            return $Title . ' | ' . config('app.name');
         }    
     }
  }
