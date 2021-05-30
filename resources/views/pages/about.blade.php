@@ -31,5 +31,5 @@
         <li>Michel Fortin's Markdown Parser</li>
         <li>Heroku</li>
     </ul>
-
+    </div>
 @endsection

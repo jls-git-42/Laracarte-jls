@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\http\Controllers\ContactsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,5 @@ use App\Http\Controllers\PagesController;
 // routes vers las pages statiques
 Route::get('/', [PagesController::class, 'home'])->name('home_path');
 Route::get('/about', [PagesController::class, 'about'])->name('about_path');
+// route vers la page formulaire contact
+Route::get('/contact', [ContactsController::class, 'create'])->name('contact_path');
