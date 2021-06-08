@@ -2,24 +2,24 @@
 
 @section('content')
     <div class="container">
-    <h2>cos'è {{ config('app.name') }} ?</h2>
-    <p>{{ config('app.name') }} è un clone di <a href="https://laramap.com" target="_blank">Laramap.com</a></p>
+    <h2>Qu'Est ce que {{ config('app.name') }} ?</h2>
+    <p>{{ config('app.name') }} est un clone de <a href="https://laramap.com" target="_blank">Laramap.com</a></p>
     <div class="row">
         <div class="col-md-6">
             <p class="alert alert-warning">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                <strong>Questa applicazione è stata creata da Gian Luigi per la formazione</strong>
+                <strong>Cette Application a été crée par Moi même, aux fins de Formation</strong>
             </p>
         </div>        
     </div>
-    <p>Sentiti libero di aiutare a migliorare il <a href="https://github.com/jls-git-42/Laracarte-jls">codice sorgente</a></p>
+    <p>N'hésite pas à proposer une amélioration du <a href="https://github.com/jls-git-42/Laracarte-jls">code source</a></p>
     <hr style="border-top: 1px solid #8c8b8b">
-    <h2>cos'è Laramap ?</h2>
-    <p>laramap è il sito web al quale si ispira {{ config('app.name') }}</p>
-    <p>maggiori informazioni <a href="#">qui...</a></p>
+    <h2>Qu'Est ce que Laramap ?</h2>
+    <p>laramap est le site web duquel s'inspire {{ config('app.name') }}</p>
+    <p>Plus d'informations <a href="#">ici...</a></p>
     <hr style="border-top: 1px solid #8c8b8b">
-    <h2>quali strumenti e servizi vengono utilizzati in {{ config('app.name') }}</h2>
-    <p>fondamentalmente è costruito con laravel & bootstrap ma ci sono un sacco di servizi usati per le e-mail e altre sezioni</p>
+    <h2>Quels supports sont utilisés dans {{ config('app.name') }} ?</h2>
+    <p>L'Application est construite avec laravel & bootstrap, mais de multiples outils sont utilisés pour la gestion des Email et autres services ..</p>
     <ul>
         <li>Laravel</li>
         <li>Bootstrap</li>

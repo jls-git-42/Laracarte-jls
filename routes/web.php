@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 use App\http\Controllers\ContactsController;
+use App\Mail\ContactMessageCreated;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,8 +16,17 @@ use App\http\Controllers\ContactsController;
 |
 */
 
-// routes vers las pages statiques
+// routes vers les pages statiques
 Route::get('/', [PagesController::class, 'home'])->name('home_path');
 Route::get('/about', [PagesController::class, 'about'])->name('about_path');
-// route vers la page formulaire contact
+// route vers l'affichage de la page formulaire contact
 Route::get('/contact', [ContactsController::class, 'create'])->name('contact_path');
+// route vers le traitement de la page formulaire contact
+Route::post('/contact', [ContactsController::class, 'store'])->name('contact_path');
+
+// route test vers la page email contact
+/*Route::get('/test-email',function(){
+
+    return new ContactMessageCreated('JLS','jlouiss42@gmail.com','Merci pour Laracarte');
+
+});*/
