@@ -17,12 +17,18 @@ use App\Mail\ContactMessageCreated;
 */
 
 // routes vers les pages statiques
-Route::get('/', [PagesController::class, 'home'])->name('home_path');
-Route::get('/about', [PagesController::class, 'about'])->name('about_path');
+/*Route::get('/', [PagesController::class, 'home'])->name('home_path');
+Route::get('/about', [PagesController::class, 'about'])->name('about_path');*/
+// quand aucune ressource n'est utile dans une page statique on a pas besoin de passer par un controleur
+//on peut directement appeler la vue concernée
+Route::view('/','/pages/home',['nom'=>'Jls'])->name('home_path');
+Route::view('/about','/pages/about')->name('about_path');
+
+
 // route vers l'affichage de la page formulaire contact
-Route::get('/contact', [ContactsController::class, 'create'])->name('contact_path');
+Route::get('/contact', [ContactsController::class, 'create'])->name('contact_create');
 // route vers le traitement de la page formulaire contact
-Route::post('/contact', [ContactsController::class, 'store'])->name('contact_path');
+Route::post('/contact', [ContactsController::class, 'store'])->name('contact_store');
 
 // route test vers la page email contact
 /*Route::get('/test-email',function(){

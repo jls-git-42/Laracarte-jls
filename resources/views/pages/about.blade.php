@@ -5,7 +5,7 @@
     <h2>Qu'Est ce que {{ config('app.name') }} ?</h2>
     <p>{{ config('app.name') }} est un clone de <a href="https://laramap.com" target="_blank">Laramap.com</a></p>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-8">
             <p class="alert alert-warning">
                 <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                 <strong>Cette Application a été crée par Moi même, aux fins de Formation</strong>

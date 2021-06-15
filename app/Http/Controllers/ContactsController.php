@@ -50,10 +50,16 @@ class ContactsController extends Controller
         // pour sauvegarde du message en base Messages methode 3
         $message = Message::create($request->only('nom','email','message'));
 
-        // pour envoyer l'email
-        //$mailable = new ContactMessageCreated($request->nom,$request->email,$request->message);
+        // pour envoyer l'email avec methode 1
+        /*$mailable = new ContactMessageCreated($request->nom,$request->email,$request->message);*/
+        // pour envoyer l'email avec methode 2 ou 3
         $mailable = new ContactMessageCreated($message);
+        /*mail::to(config('laracarte.admin_support_email'))->send($mailable);*/
+        //envoi du mail géré par la file d'attente
+        /*mail::to(config('laracarte.admin_support_email'))->queue($mailable);*/
+        //on peut aussi utliser la methode send avec une queue en inplementant l'interface shouldQueue dans la classe contactMessageCreated
         mail::to(config('laracarte.admin_support_email'))->send($mailable);
+        
         Flashy::success('Nous avons recu votre message et vous répondrons au plus vite ...');
 
         return redirect::route('home_path');

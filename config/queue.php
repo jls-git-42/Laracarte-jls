@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'default' => env('QUEUE_CONNECTION', 'sync'),
+    'default' => env('QUEUE_CONNECTION', 'database'),
 
-    /*
+    /*php artisan queue:tablemigrate
     |--------------------------------------------------------------------------
     | Queue Connections
     |--------------------------------------------------------------------------
